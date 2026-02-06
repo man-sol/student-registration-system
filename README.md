@@ -28,4 +28,4 @@ A responsive Student Registration System built using HTML, CSS, and JavaScript.
 
 - github repo link: https://github.com/man-sol/student-registration-system
 
-- github pages link: 
+- github pages link: https://man-sol.github.io/student-registration-system/
