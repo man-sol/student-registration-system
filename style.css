@@ -1,6 +1,4 @@
-/* =========================
-   Global Reset & Variables
-========================= */
+/* Css global variables*/
 * {
     margin: 0;
     padding: 0;
@@ -17,18 +15,18 @@
     --gray: #b3b3b3;
 }
 
-/* =========================
+/* 
    Body
-========================= */
+ */
 body {
     background-color: var(--black);
     color: var(--white);
     min-height: 100vh;
 }
 
-/* =========================
+/* 
    Header
-========================= */
+ */
 header {
     background-color: var(--dark);
     border-bottom: 3px solid var(--yellow);
@@ -47,18 +45,18 @@ header p {
     font-size: 0.95rem;
 }
 
-/* =========================
+/* 
    Main Layout
-========================= */
+ */
 .container {
     display: flex;
     gap: 24px;
     padding: 24px;
 }
 
-/* =========================
+/* 
    Form Section
-========================= */
+ */
 .form-section {
     flex: 1;
     background-color: var(--dark);
@@ -116,9 +114,9 @@ form button:hover {
     background-color: var(--yellow-soft);
 }
 
-/* =========================
+/* 
    Display Section
-========================= */
+ */
 .display-section {
     flex: 2;
     background-color: var(--dark);
@@ -132,18 +130,18 @@ form button:hover {
     text-align: center;
 }
 
-/* =========================
+/* 
    Table Wrapper (Scrollbar)
-========================= */
+ */
 .table-wrapper {
     margin-top: 14px;
     max-height: 320px;
-    overflow-y: auto;
+    
 }
 
-/* =========================
+/* 
    Table Styling
-========================= */
+ */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -169,9 +167,9 @@ tbody tr:nth-child(even) {
     background-color: #121212;
 }
 
-/* =========================
+/* 
    Action Buttons
-========================= */
+ */
 button.edit {
     background-color: var(--yellow);
     color: var(--black);
@@ -201,9 +199,9 @@ button.delete:hover {
     opacity: 0.85;
 }
 
-/* =========================
+/* 
    Responsive Design
-========================= */
+ */
 
 /* Mobile */
 @media (max-width: 640px) {
@@ -214,6 +212,10 @@ button.delete:hover {
     .container {
         flex-direction: column;
         padding: 16px;
+    }
+
+    button.edit{
+        margin-bottom: 3px;
     }
 }
 

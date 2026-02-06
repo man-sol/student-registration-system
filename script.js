@@ -83,6 +83,22 @@ function displayStudents() {
         `;
         tableBody.innerHTML += row;
     });
+
+    // ✅ Dynamic scrollbar control using JavaScript
+    handleScrollbar();
+}
+
+
+// dynaic scrollbar
+function handleScrollbar() {
+    const tableWrapper = document.querySelector(".table-wrapper");
+
+    // If records exceed 4 rows, enable scrollbar
+    if (students.length > 4) {
+        tableWrapper.style.overflowY = "auto";
+    } else {
+        tableWrapper.style.overflowY = "hidden";
+    }
 }
 
 // Edit Student
