@@ -1,0 +1,225 @@
+/* =========================
+   Global Reset & Variables
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+:root {
+    --black: #0b0b0b;
+    --dark: #161616;
+    --yellow: #f1c40f;
+    --yellow-soft: #f7dc6f;
+    --white: #ffffff;
+    --gray: #b3b3b3;
+}
+
+/* =========================
+   Body
+========================= */
+body {
+    background-color: var(--black);
+    color: var(--white);
+    min-height: 100vh;
+}
+
+/* =========================
+   Header
+========================= */
+header {
+    background-color: var(--dark);
+    border-bottom: 3px solid var(--yellow);
+    text-align: center;
+    padding: 22px;
+}
+
+header h1 {
+    color: var(--yellow);
+    font-size: 2rem;
+}
+
+header p {
+    color: var(--yellow-soft);
+    margin-top: 6px;
+    font-size: 0.95rem;
+}
+
+/* =========================
+   Main Layout
+========================= */
+.container {
+    display: flex;
+    gap: 24px;
+    padding: 24px;
+}
+
+/* =========================
+   Form Section
+========================= */
+.form-section {
+    flex: 1;
+    background-color: var(--dark);
+    padding: 22px;
+    border-radius: 12px;
+    border: 1px solid var(--yellow);
+}
+
+.form-section h2 {
+    color: var(--yellow);
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+/* Form Elements */
+form label {
+    display: block;
+    margin-top: 14px;
+    color: var(--yellow-soft);
+    font-size: 0.9rem;
+}
+
+form input {
+    width: 100%;
+    margin-top: 6px;
+    padding: 10px;
+    background-color: var(--black);
+    color: var(--white);
+    border: 1px solid var(--yellow);
+    border-radius: 6px;
+    font-size: 0.95rem;
+}
+
+form input:focus {
+    outline: none;
+    border-color: var(--yellow-soft);
+}
+
+/* Submit Button */
+form button {
+    margin-top: 20px;
+    width: 100%;
+    padding: 12px;
+    background-color: var(--yellow);
+    color: var(--black);
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+form button:hover {
+    background-color: var(--yellow-soft);
+}
+
+/* =========================
+   Display Section
+========================= */
+.display-section {
+    flex: 2;
+    background-color: var(--dark);
+    padding: 22px;
+    border-radius: 12px;
+    border: 1px solid var(--yellow);
+}
+
+.display-section h2 {
+    color: var(--yellow);
+    text-align: center;
+}
+
+/* =========================
+   Table Wrapper (Scrollbar)
+========================= */
+.table-wrapper {
+    margin-top: 14px;
+    max-height: 320px;
+    overflow-y: auto;
+}
+
+/* =========================
+   Table Styling
+========================= */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    background-color: var(--yellow);
+    color: var(--black);
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid var(--yellow);
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+tbody tr {
+    background-color: var(--black);
+}
+
+tbody tr:nth-child(even) {
+    background-color: #121212;
+}
+
+/* =========================
+   Action Buttons
+========================= */
+button.edit {
+    background-color: var(--yellow);
+    color: var(--black);
+    border: none;
+    padding: 6px 12px;
+    margin-right: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.85rem;
+}
+
+button.edit:hover {
+    background-color: var(--yellow-soft);
+}
+
+button.delete {
+    background-color: #e74c3c;
+    color: var(--white);
+    border: none;
+    padding: 6px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.85rem;
+}
+
+button.delete:hover {
+    opacity: 0.85;
+}
+
+/* =========================
+   Responsive Design
+========================= */
+
+/* Mobile */
+@media (max-width: 640px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .container {
+        flex-direction: column;
+        padding: 16px;
+    }
+}
+
+/* Tablet */
+@media (min-width: 641px) and (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+    }
+}
